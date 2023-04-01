@@ -52,6 +52,9 @@ if(isset($_GET['id']))
 								<ul class="actions vertical">
 									<?php if (isset($_SESSION['login'] )) { ?>
 									<li>
+										<a href="add.php">
+											<h3>Add Posts</h3>
+										</a>
 										<p><?=$_SESSION['login']?></p>
 										<a href="logout.php"><h3>Log out</h3></a>
 									</li>
@@ -130,19 +133,6 @@ if(isset($_GET['id']))
 							</div>
 
 					</div>
-					<footer>
-						<ul class="stats">
-							<li>
-								<a href="#">Edit<a>
-								</li>
-								<?php if ($_SESSION['login']=='admin') { ?>
-								<li><a href="remove.php?id=<?= $post['id'] ?>" class="red">Delete</a></li>
-								<?php }?>
-							<li><a href="#" class="red">Blocked</a></li>
-							<li><a href="#" class="icon fa-heart">28</a></li>
-							<li><a href="#" class="icon fa-comment">128</a></li>
-						</ul>
-					</footer>
 				<!-- Footer -->
 					<section id="footer">
 						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>

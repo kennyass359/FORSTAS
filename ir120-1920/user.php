@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <!--
 	Future Imperfect by HTML5 UP
@@ -33,25 +36,19 @@
 
 				<!-- Menu -->
 					<section id="menu">
-						<!-- Links -->
 						<section>
-								<ul class="links">
-									<li>
-										<a href="add.php">
-											<h3>Add Post</h3>
-										</a>
-									</li>
-									
+							<ul class="links">
+								<li>
+									<a href="add.php">
+										<h3>Add Posts</h3>
+									</a>
 									<li>
 										<p><?=$_SESSION['login']?></p>
 										<a href="logout.php"><h3>Log Out</h3></a>
 									</li>
-								</ul>
-							</section>
-
-						<!-- Actions -->
-							
-
+								</li>
+							</ul>
+						</section>
 					</section>
 
 				<!-- Main -->

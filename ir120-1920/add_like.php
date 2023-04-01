@@ -6,8 +6,8 @@ $stmt->execute([
     $_SESSION['login']
 ]);
 $login = $stmt->fetch();
-if ($_SESSION['login']==null) {
-    $user_id=$_COOKIE['user_id'];
+if ($_SESSION['login'] == null) {
+    $user_id = $_COOKIE['user_id'];
 } else {
     $user_id = $login['id'];
 }
@@ -24,13 +24,11 @@ if ($likes) {
         $_GET['id'],
         $user_id
     ]);
-}
-else {
-    $stmt2 = $pdo->prepare("insert into likes(post_id,user_id) values(?,?)");
+} else {
+    $stmt2 = $pdo->prepare("insert into likes(post_id, user_id) values(?,?)");
     $stmt2->execute([
         $_GET['id'],
         $user_id
     ]);
 }
 header("Location: index.php");
-?>
